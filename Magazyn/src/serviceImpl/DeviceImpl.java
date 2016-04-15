@@ -36,7 +36,7 @@ public class DeviceImpl implements DeviceRepo {
 
 		System.out.println("ostatni index: " + index);
 		for(int i=0; i<index; i++){
-			System.out.println("lista: "+ lista.get(i));
+			System.out.println("lista: "+ lista.get(i).getNazwaSprzetu());
 			System.out.println("lista nr "+i);
 		}
 
