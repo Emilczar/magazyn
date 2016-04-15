@@ -26,7 +26,6 @@ public class DeviceImpl implements DeviceRepo {
 		lista.add(index, device);
 
 
-
 	}
 
 	@Override
