@@ -25,10 +25,19 @@ public class Main extends Application {
 		System.out.println("testy");
 		DeviceImpl deviceImpl = new DeviceImpl();
 		deviceImpl.addDevice("serial", "nazwa");
+		deviceImpl.displayDevice();
 		deviceImpl.addDevice("serial1", "nazwa1");
+		deviceImpl.displayDevice();
+
 		deviceImpl.addDevice("serial2", "nazwa2");
+		deviceImpl.displayDevice();
+
 		deviceImpl.addDevice("serial3", "nazwa3");
+		deviceImpl.displayDevice();
+
 		deviceImpl.addDevice("serial4", "nazwa4");
+		deviceImpl.displayDevice();
+
 		deviceImpl.addDevice("serial5", "nazwa5");
 		deviceImpl.displayDevice();
 

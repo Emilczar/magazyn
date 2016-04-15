@@ -10,12 +10,13 @@ import service.DeviceRepo;
 
 public class DeviceImpl implements DeviceRepo {
 	String time;
-	List<Device> lista = new ArrayList<Device>();
+
+	ArrayList<Device> lista = new ArrayList<Device>();
 	int index;
-	Device device = new Device();
+
 	@Override
 	public void addDevice(String numberSerial, String Name) {
-
+		Device device = new Device();
 		LocalDate loDate = LocalDate.now();
 		time = loDate.toString();
 		device.setNumerSeryjny(numberSerial);
@@ -23,7 +24,7 @@ public class DeviceImpl implements DeviceRepo {
 		device.setTime(time);
 		index = lista.size();
 		System.out.println("index: "+ index);
-		lista.add(index, device);
+		lista.add(device);
 
 
 
@@ -35,7 +36,11 @@ public class DeviceImpl implements DeviceRepo {
 
 		System.out.println("ostatni index: " + index);
 		for(int i=0; i<index; i++){
-			System.out.println("lista: "+ lista.get(0));
+			System.out.println("lista: "+ lista.get(i));
+			System.out.println("lista nr "+i);
 		}
+
+
+		//System.out.println("lista nr "+ lista);
 	}
 }
