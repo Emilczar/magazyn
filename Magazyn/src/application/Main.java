@@ -3,6 +3,7 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import serviceImpl.DeviceImpl;
+import serviceImpl.MenuXmlImpl;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +24,20 @@ public class Main extends Application {
 
 
 		System.out.println("testy");
-		DeviceImpl deviceImpl = new DeviceImpl();
+
+		MenuXmlImpl impl = new  MenuXmlImpl();
+		//impl.getXml();\
+		for (int j = 0; j < impl.list().size(); j++) {
+			String test = (String)impl.list().get(j);
+			System.out.println("lista "+ test);
+		}
+
+
+
+
+
+
+		/*DeviceImpl deviceImpl = new DeviceImpl();
 		deviceImpl.addDevice("serial", "nazwa");
 		deviceImpl.displayDevice();
 		deviceImpl.addDevice("serial1", "nazwa1");
@@ -39,7 +53,7 @@ public class Main extends Application {
 		deviceImpl.displayDevice();
 
 		deviceImpl.addDevice("serial5", "nazwa5");
-		deviceImpl.displayDevice();
+		deviceImpl.displayDevice();*/
 
 
 

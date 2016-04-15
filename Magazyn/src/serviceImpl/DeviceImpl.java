@@ -40,6 +40,7 @@ public class DeviceImpl implements DeviceRepo {
 		}
 
 
-		System.out.println("lista nr "+ lista);
+
+
 	}
 }
