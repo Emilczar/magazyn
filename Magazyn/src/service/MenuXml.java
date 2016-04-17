@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public interface MenuXml {
 	void getXml() throws IOException;
 
-	public ArrayList<String> list();
+	//tworzenie menu dla combox
+	public ArrayList<String> menuComBox();
 
 }

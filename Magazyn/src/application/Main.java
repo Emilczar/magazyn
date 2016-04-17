@@ -2,10 +2,12 @@ package application;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import serviceImpl.DeviceImpl;
+import serviceImpl.ButtonFunctionImpl;
 import serviceImpl.MenuXmlImpl;
 import javafx.scene.Scene;
+
 import javafx.scene.layout.VBox;
+
 import javafx.fxml.FXMLLoader;
 
 
@@ -18,42 +20,22 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 
 
-		System.out.println("testy");
-
-		MenuXmlImpl impl = new  MenuXmlImpl();
-		//impl.getXml();\
-		for (int j = 0; j < impl.list().size(); j++) {
-			String test = (String)impl.list().get(j);
-			System.out.println("lista "+ test);
-		}
+		System.out.println("Aplikacja Start");
 
 
 
 
+		ButtonFunctionImpl buttonFunctionImpl = new ButtonFunctionImpl();
+		buttonFunctionImpl.addWarehous("serial", "Name");
 
 
-		/*DeviceImpl deviceImpl = new DeviceImpl();
-		deviceImpl.addDevice("serial", "nazwa");
-		deviceImpl.displayDevice();
-		deviceImpl.addDevice("serial1", "nazwa1");
-		deviceImpl.displayDevice();
-
-		deviceImpl.addDevice("serial2", "nazwa2");
-		deviceImpl.displayDevice();
-
-		deviceImpl.addDevice("serial3", "nazwa3");
-		deviceImpl.displayDevice();
-
-		deviceImpl.addDevice("serial4", "nazwa4");
-		deviceImpl.displayDevice();
-
-		deviceImpl.addDevice("serial5", "nazwa5");
-		deviceImpl.displayDevice();*/
 
 
 

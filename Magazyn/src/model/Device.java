@@ -1,15 +1,13 @@
 package model;
 
+
+
 public class Device {
+
 	private String numerSeryjny;
-	private String nazwaSprzetu;
-	private String time;
+	private String  nazwaSprzetu;
+	private String  time;
 
-
-	@Override
-	public String toString() {
-		return "Device [numerSeryjny=" + numerSeryjny + ", nazwaSprzetu=" + nazwaSprzetu + ", time=" + time + "]";
-	}
 	public String getNumerSeryjny() {
 		return numerSeryjny;
 	}
@@ -28,5 +26,10 @@ public class Device {
 	public void setTime(String time) {
 		this.time = time;
 	}
+
+
+
+
+
 
 }
