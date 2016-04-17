@@ -21,16 +21,17 @@ public class SampleController {
 	@FXML
 	void initialize(){
 
+
 		MenuXmlImpl impl = new  MenuXmlImpl();
 		ObservableList<MenuSprzet> list = FXCollections.observableArrayList();
+		menuBox.setItems(list);
 
 		for (int j = 0; j < impl.menuComBox().size(); j++) {
 			String test = (String)impl.menuComBox().get(j);
 			list.add(new MenuSprzet(test));
-
 		}
+		menuBox.getSelectionModel().selectFirst();
 
-		menuBox.setItems(list);
 
 
 
