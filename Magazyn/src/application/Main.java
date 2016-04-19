@@ -32,8 +32,7 @@ public class Main extends Application {
 
 
 
-		ButtonFunctionImpl buttonFunctionImpl = new ButtonFunctionImpl();
-		buttonFunctionImpl.addWarehous("serial", "Name");
+
 
 
 

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox blendMode="MULTIPLY" maxHeight="786.0" maxWidth="875.0" minHeight="600.0" minWidth="800.0" prefHeight="786.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<VBox fx:id="vbox" blendMode="MULTIPLY" maxHeight="786.0" maxWidth="875.0" minHeight="600.0" minWidth="800.0" prefHeight="786.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <Button defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="Dodaj" textOverrun="WORD_ELLIPSIS" VBox.vgrow="ALWAYS">
+      <Button fx:id="addButon" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="40.0" text="Dodaj" textOverrun="WORD_ELLIPSIS" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets left="350.0" top="50.0" />
          </VBox.margin>
@@ -19,26 +19,23 @@
             <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
          </padding>
       </Button>
-      <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="100.0">
+      <TextField fx:id="textField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#testClik" prefHeight="30.0" prefWidth="100.0">
          <VBox.margin>
             <Insets left="10.0" top="-30.0" />
          </VBox.margin>
       </TextField>
-      <ComboBox  fx:id="menuBox" prefHeight="30.0" prefWidth="150.0">
+      <ComboBox fx:id="menuBox" prefHeight="30.0" prefWidth="150.0">
          <VBox.margin>
             <Insets left="150.0" top="-30.0" />
          </VBox.margin>
       </ComboBox>
-      <TableView maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="553.0">
+      <TableView fx:id="tabableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="271.0" prefWidth="473.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="NS" />
-          <TableColumn prefWidth="75.0" text="Nazwa" />
-          <TableColumn prefWidth="75.0" text="Data" />
+          <TableColumn fx:id="NS" prefWidth="75.0" text="NS" />
+          <TableColumn fx:id="Nazwa" prefWidth="75.0" text="Nazwa" />
+          <TableColumn fx:id="Data" prefWidth="75.0" text="Data" />
 
-        </columns>
-         <VBox.margin>
-            <Insets top="50.0" />
-         </VBox.margin>
+                    </columns>
       </TableView>
    </children>
 </VBox>
