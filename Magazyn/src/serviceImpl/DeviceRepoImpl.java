@@ -11,9 +11,28 @@ public class DeviceRepoImpl implements DeviceRepo {
 	String time;
 	String name;
 
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ArrayList<Device> getLista() {
+		return lista;
+	}
 
 	ArrayList<Device> lista = new ArrayList<Device>();
-	 String tab[][] = new String[3][lista.size()];
+	String tab[][] = new String[3][lista.size()];
 	int index;
 
 	@Override
@@ -32,13 +51,9 @@ public class DeviceRepoImpl implements DeviceRepo {
 
 	@Override
 	public String displayDevice() {
-		 System.out.println("lista: "+ lista.get(0).getNazwaSprzetu());
-		 String testy = lista.get(0).getNazwaSprzetu();
+		System.out.println("lista: " + lista.get(0).getNazwaSprzetu());
+		String testy = lista.get(0).getNazwaSprzetu();
 		return testy;
-
-
-
-
 
 	}
 

@@ -1,12 +1,16 @@
 package model;
 
 public class MenuSprzet {
+
+
+	private String name;
+
 	@Override
 	public String toString() {
 		return name;
 	}
 
-	private String name;
+
 
 	public MenuSprzet(String name){
 		this.name = name;

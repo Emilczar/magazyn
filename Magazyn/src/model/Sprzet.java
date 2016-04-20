@@ -1,5 +1,6 @@
 package model;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Sprzet {
@@ -9,16 +10,13 @@ public class Sprzet {
 	private final StringProperty czas;
 
 
-	public Sprzet(){
-		this(null, null, null);
 
-	}
 
-	public Sprzet(StringProperty numberSerial, StringProperty nazwaSprzetu, StringProperty czas) {
+	public Sprzet(String numerSeryjny, String nazwaSp, String time) {
 
-		this.numberSerial = numberSerial;
-		this.nazwaSprzetu = nazwaSprzetu;
-		this.czas = czas;
+		this.numberSerial = new SimpleStringProperty(numerSeryjny);
+		this.nazwaSprzetu = new SimpleStringProperty(nazwaSp);
+		this.czas = new SimpleStringProperty(time);
 	}
 
 	public final StringProperty numberSerialProperty() {
