@@ -1,6 +1,9 @@
 package application;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -65,6 +68,7 @@ public class SampleController {
 
 		ObservableList<MenuSprzet> list = FXCollections.observableArrayList();
 		menuBox.setItems(list);
+
 		for (int j = 0; j < impl.menuComBox().size(); j++) {
 			String test = (String) impl.menuComBox().get(j);
 			list.add(new MenuSprzet(test));
@@ -78,16 +82,10 @@ public class SampleController {
 		EventHandler<ActionEvent> handler = new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				System.out.println("testy " + textField.getText() + " menu "
-						+ menuBox.getSelectionModel().getSelectedItem() + "ilosc  " + textField.getLength());
 				if (textField.getLength() == 0) {
 					System.out.println("Ilosc textu jest 0");
-
 					textField.clear();
-
 				} else {
-
-					System.out.println("Ilosc textu jest wieksza od 0");
 					String numerSeryjny = textField.getText();
 					String nazwaSp = menuBox.getSelectionModel().getSelectedItem().toString();
 					DeviceRepoImpl deviceRepoImpl = new DeviceRepoImpl();
@@ -96,11 +94,9 @@ public class SampleController {
 					deviceList.add(new Sprzet(numerSeryjny, nazwaSp, time));
 					nsCol.setCellValueFactory(cellData -> cellData.getValue().numberSerialProperty());
 					nazwaCol.setCellValueFactory(cellData -> cellData.getValue().nazwaSprzetuProperty());
-					dataCol.setCellValueFactory(cellData -> cellData.getValue().dataProperty());
+					dataCol.setCellValueFactory(cellData -> cellData.getValue().czasProperty());
 					tabableView.setItems(deviceList);
-					System.out.println("nazwa teksu nazw :" + nazwaSp);
 					textField.clear();
-
 				}
 
 			}
@@ -108,33 +104,6 @@ public class SampleController {
 
 		addButon.addEventHandler(ActionEvent.ACTION, handler);
 
-		///////////////////////////////////////////////////////////////////////////////////////////////
-
-		/////////////////////////////////////////////////////////////////////////////////////////////
-
-		/*
-		 * EventHandler<MouseEvent> moEventHandler = e -> { System.out.println(
-		 * "myszka z lambdy");
-		 *
-		 *
-		 * };
-		 */
-
-		/*
-		 * addButon.addEventHandler(MouseEvent.MOUSE_ENTERED, moEventHandler);
-		 *
-		 * /////////////////////////////////////////////////////////////////////
-		 * //////////////////////// addButon.setOnAction(e -> {
-		 * System.out.println("handler setON");
-		 * addButon.removeEventHandler(MouseEvent.MOUSE_ENTERED,
-		 * moEventHandler);
-		 *
-		 *
-		 *
-		 * });
-		 */
-
-		/////////////////////////////////////////////////////////////////////////////////////////////
 
 	}
 }

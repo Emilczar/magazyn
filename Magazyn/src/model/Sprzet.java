@@ -43,16 +43,16 @@ public class Sprzet {
 		this.nazwaSprzetuProperty().set(nazwaSprzetu);
 	}
 
-	public final StringProperty dataProperty() {
+	public final StringProperty czasProperty() {
 		return this.czas;
 	}
 
-	public final String getData() {
-		return this.dataProperty().get();
+	public final String getCzas() {
+		return this.czasProperty().get();
 	}
 
-	public final void setData(final String czas) {
-		this.dataProperty().set(czas);
+	public final void setCzas(final String czas) {
+		this.czasProperty().set(czas);
 	}
 
 
