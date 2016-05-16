@@ -1,10 +1,16 @@
-package application;
+package app;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import app.model.Device;
+import app.model.MenuSprzet;
+import app.model.Sprzet;
+import app.service.Impl.ButtonFunctionImpl;
+import app.service.Impl.DeviceRepoImpl;
+import app.service.Impl.MenuXmlImpl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -22,12 +28,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
-import model.Device;
-import model.MenuSprzet;
-import model.Sprzet;
-import serviceImpl.ButtonFunctionImpl;
-import serviceImpl.DeviceRepoImpl;
-import serviceImpl.MenuXmlImpl;
 
 public class SampleController {
 
@@ -103,7 +103,6 @@ public class SampleController {
 		};
 
 		addButon.addEventHandler(ActionEvent.ACTION, handler);
-
 
 	}
 }

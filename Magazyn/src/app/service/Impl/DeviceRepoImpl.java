@@ -1,11 +1,11 @@
-package serviceImpl;
+package app.service.Impl;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Device;
-import service.DeviceRepo;
+import app.model.Device;
+import app.service.DeviceRepo;
 
 public class DeviceRepoImpl implements DeviceRepo {
 	String time;

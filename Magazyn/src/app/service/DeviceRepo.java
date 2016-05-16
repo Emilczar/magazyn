@@ -1,9 +1,9 @@
-package service;
+package app.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import model.Device;
+import app.model.Device;
 
 public interface DeviceRepo {
 
