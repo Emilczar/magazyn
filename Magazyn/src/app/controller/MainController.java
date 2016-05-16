@@ -23,8 +23,11 @@ public class MainController {
 
 			e.printStackTrace();
 		}
+		MenuController menuController = loader.getController();
+		menuController.setMainController(this);
 		mainStackPane.getChildren().add(pane);
 
 	}
+
 
 }
